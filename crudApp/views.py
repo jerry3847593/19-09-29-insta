@@ -78,7 +78,7 @@ def detail_post(request,post_pk):
     post = get_object_or_404(Post, id = post_pk)
     return render(request,'detail_post.html',{'post':post})
 class Detail_post(DetailView):
-    model = Post
+    model = Product
     template_name = 'detail_post.html'
     form_class = PostForm
     success_url = reverse_lazy('home')
